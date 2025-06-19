@@ -1,0 +1,39 @@
+{
+  "name": "job-board-scraper",
+  "version": "1.0.0",
+  "description": "TypeScript web scraper for job boards",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "ts-node main.ts",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "watch": "tsc --watch",
+    "scrape": "npm run build && node dist/main.js"
+  },
+  "keywords": [
+    "typescript",
+    "scraper",
+    "jobs",
+    "puppeteer",
+    "web-scraping"
+  ],
+  "author": "Francis Mwaniki",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^6.10.1",
+    "axios": "^1.10.0",
+    "cheerio": "^1.0.0-rc.12",
+    "node-cron": "^4.1.0",
+    "pg": "^8.16.1",
+    "prisma": "^6.10.1",
+    "puppeteer": "^24.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.3",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
